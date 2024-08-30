@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import dynamic from "next/dynamic";
 const JotaiProvider = dynamic(() => import("@/providers/jotaiProvider"), { ssr: false });
 import "./globals.css";
+import Header from "@/components/header/page";
+import Footer from "@/components/footer/page";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,11 +20,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-gradient-to-br from-slate-800 to-slate-950 h-screen`}>
+      <body className={`${inter.className} bg-gradient-to-br from-slate-800 to-slate-950 h-screen flex flex-col`}>
         <JotaiProvider>
-          <div className="px-20">
+          <Header/>
+          <div className="grow px-20">
             {children}
           </div>
+          <Footer/>
         </JotaiProvider>
       </body>
     </html>
