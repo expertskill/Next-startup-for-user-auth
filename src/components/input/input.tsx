@@ -1,13 +1,17 @@
 import React from "react";
 
 const Input = ({
-  name, type,
-  value, onChange,
+  name, 
+  type,
+  value, 
+  onChange,
   placeholder = ''
 }: {
   name: string,
-  type: string, value: string,
-  onChange: any, placeholder: string
+  type: string, 
+  value: string,
+  onChange: any, 
+  placeholder: string
 }) => {
   return (
     <div className="input-group mt-6 w-[100%]">
