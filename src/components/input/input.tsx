@@ -1,6 +1,14 @@
 import React from "react";
 
-const Input = ({name, type, value, onChange, placeholder = 'ppp'}: {name: string, type: string, value: string, onChange: any, placeholder: string}) => {
+const Input = ({
+  name, type,
+  value, onChange,
+  placeholder = ''
+}: {
+  name: string,
+  type: string, value: string,
+  onChange: any, placeholder: string
+}) => {
   return (
     <div className="input-group mt-6 w-[100%]">
       <p className="text-gray-950 text-[26px] mb-2">{name}</p>
