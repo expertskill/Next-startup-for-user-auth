@@ -5,7 +5,7 @@ const Input = ({
   type,
   value, 
   onChange,
-  placeholder = ''
+  placeholder
 }: {
   name: string,
   type: string, 
